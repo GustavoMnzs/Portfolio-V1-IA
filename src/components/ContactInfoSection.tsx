@@ -1,24 +1,20 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
-import { CustomButton } from "@/components/CustomButton"; // Importando CustomButton
+import { CustomButton } from "@/components/CustomButton";
 
 const contactItems = [
   {
-    icon: Mail,
     title: "Email",
-    value: "seu.email@exemplo.com",
-    href: "mailto:seu.email@exemplo.com",
+    value: "gustavomnzs1@gmail.com",
+    href: "mailto:gustavomnzs1@gmail.com",
   },
   {
-    icon: Phone,
-    title: "Telefone",
-    value: "+55 (XX) XXXX-XXXX",
-    href: "tel:+55xxxxxxxxxxx",
+    title: "Phone",
+    value: "(61) 99266-2886",
+    href: "tel:+5561992662886",
   },
   {
-    icon: MapPin,
-    title: "Localização",
-    value: "Sua Cidade, Seu Estado",
+    title: "Location",
+    value: "Brasília - Brasil",
     href: "#",
   },
 ];
@@ -39,37 +35,54 @@ const socialLinks = [
 const ContactInfoSection = () => {
   return (
     <section id="contact" className="container py-16 md:py-24">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Informações de Contato</h2>
-      
-      <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-3">
-        {contactItems.map((item, index) => (
-          <Card key={index} className="text-center p-6 transition-all hover:shadow-primary/50 hover:shadow-lg">
-            <CardHeader className="p-0 mb-4">
-              <item.icon className="h-10 w-10 text-primary mx-auto" />
-            </CardHeader>
-            <CardContent className="p-0">
-              <CardTitle className="text-xl mb-1">{item.title}</CardTitle>
-              <a 
-                href={item.href} 
-                className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                target={item.href.startsWith('http') || item.href.startsWith('mailto') || item.href.startsWith('tel') ? "_blank" : "_self"}
-                rel="noopener noreferrer"
-              >
-                {item.value}
-              </a>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <div className="grid md:grid-cols-2 gap-12 items-center">
+        {/* Coluna de Informações de Contato */}
+        <div className="space-y-8">
+          <h2 className="text-xl font-semibold text-primary">Entre em Contato</h2>
+          <h3 className="text-4xl md:text-5xl font-bold text-foreground">
+            Vamos criar algo extraordinário juntos.
+          </h3>
 
-      <div className="flex justify-center space-x-4 mt-12">
-        {socialLinks.map((social) => (
-          <CustomButton key={social.label} variant="primary-outline" size="icon" asChild>
-            <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
-              <social.icon className="h-5 w-5" />
+          <div className="space-y-6 pt-4">
+            {contactItems.map((item, index) => (
+              <div key={index}>
+                <p className="text-sm text-muted-foreground mb-1">{item.title}</p>
+                <a 
+                  href={item.href} 
+                  className="text-xl font-medium hover:text-primary transition-colors"
+                  target={item.href.startsWith('http') || item.href.startsWith('mailto') || item.href.startsWith('tel') ? "_blank" : "_self"}
+                  rel="noopener noreferrer"
+                >
+                  {item.value}
+                </a>
+              </div>
+            ))}
+          </div>
+
+          {/* Botão de Ação */}
+          <CustomButton size="lg" asChild className="mt-8">
+            <a href={`mailto:${contactItems[0].value}`}>
+              Falar com Gustavo
             </a>
           </CustomButton>
-        ))}
+
+          {/* Links Sociais */}
+          <div className="flex space-x-4 pt-4">
+            {socialLinks.map((social) => (
+              <CustomButton key={social.label} variant="primary-outline" size="icon" asChild>
+                <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
+                  <social.icon className="h-5 w-5" />
+                </a>
+              </CustomButton>
+            ))}
+          </div>
+        </div>
+
+        {/* Coluna de Ilustração (Placeholder) */}
+        <div className="hidden md:flex justify-center items-center h-full min-h-[400px] bg-muted/50 rounded-xl p-8">
+          <Mail className="h-24 w-24 text-primary/50" />
+          <p className="absolute text-muted-foreground/50 mt-40">Ilustração de Contato</p>
+        </div>
       </div>
     </section>
   );
