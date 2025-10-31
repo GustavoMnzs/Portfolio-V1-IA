@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import ProjectsSection from "@/components/ProjectsSection";
-import ContactSection from "@/components/ContactSection";
+import ContactInfoSection from "@/components/ContactInfoSection";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
@@ -21,8 +21,8 @@ const Index = () => {
         {/* Projects Showcase */}
         <ProjectsSection />
         
-        {/* Contact Form */}
-        <ContactSection />
+        {/* Contact Info */}
+        <ContactInfoSection />
       </main>
 
       {/* Footer/MadeWithDyad */}
