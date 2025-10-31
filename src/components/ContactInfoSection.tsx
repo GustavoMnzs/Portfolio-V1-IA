@@ -19,18 +19,7 @@ const contactItems = [
   },
 ];
 
-const socialLinks = [
-  {
-    icon: Github,
-    href: "https://github.com/seuusuario",
-    label: "GitHub",
-  },
-  {
-    icon: Linkedin,
-    href: "https://linkedin.com/in/seuusuario",
-    label: "LinkedIn",
-  },
-];
+// Links sociais removidos para corresponder ao print
 
 const ContactInfoSection = () => {
   return (
@@ -59,23 +48,12 @@ const ContactInfoSection = () => {
             ))}
           </div>
 
-          {/* Botão de Ação */}
-          <CustomButton size="lg" asChild className="mt-8">
+          {/* Botão de Ação - Usando primary-outline para o visual de contorno */}
+          <CustomButton variant="primary-outline" size="lg" asChild className="mt-8">
             <a href={`mailto:${contactItems[0].value}`}>
               Falar com Gustavo
             </a>
           </CustomButton>
-
-          {/* Links Sociais */}
-          <div className="flex space-x-4 pt-4">
-            {socialLinks.map((social) => (
-              <CustomButton key={social.label} variant="primary-outline" size="icon" asChild>
-                <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
-                  <social.icon className="h-5 w-5" />
-                </a>
-              </CustomButton>
-            ))}
-          </div>
         </div>
 
         {/* Coluna de Ilustração (Placeholder) */}
