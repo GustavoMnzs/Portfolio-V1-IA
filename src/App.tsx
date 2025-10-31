@@ -14,7 +14,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="dark"> {/* Adicionando a classe 'dark' aqui */}
+        {/* Aplicamos 'dark' e garantimos que o container principal use o fundo preto e preencha a tela */}
+        <div className="dark min-h-screen bg-background"> 
           <Routes>
             <Route path="/" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
