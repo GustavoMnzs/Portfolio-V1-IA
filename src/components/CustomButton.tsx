@@ -8,11 +8,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        // Botão Primário: Fundo Claro (Ciano), Texto Escuro (Preto). Hover Inverte.
         default: "bg-primary text-primary-foreground hover:bg-background hover:text-primary border border-primary",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        // Nova variante para Outline de alto contraste
+        "primary-outline":
+          "border border-primary text-primary bg-background hover:bg-primary hover:text-primary-foreground",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",

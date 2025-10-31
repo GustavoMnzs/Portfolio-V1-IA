@@ -16,9 +16,9 @@ const HeroSection = () => {
           <CustomButton size="lg" className="shadow-lg">
             Ver Projetos
           </CustomButton>
-          <Button variant="outline" size="lg">
+          <CustomButton variant="primary-outline" size="lg">
             Entrar em Contato <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          </CustomButton>
         </div>
       </div>
     </section>

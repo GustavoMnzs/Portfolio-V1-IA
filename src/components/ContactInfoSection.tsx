@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { CustomButton } from "@/components/CustomButton"; // Importando CustomButton
 
 const contactItems = [
   {
@@ -64,11 +64,11 @@ const ContactInfoSection = () => {
 
       <div className="flex justify-center space-x-4 mt-12">
         {socialLinks.map((social) => (
-          <Button key={social.label} variant="outline" size="icon" asChild>
+          <CustomButton key={social.label} variant="primary-outline" size="icon" asChild>
             <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
               <social.icon className="h-5 w-5" />
             </a>
-          </Button>
+          </CustomButton>
         ))}
       </div>
     </section>
