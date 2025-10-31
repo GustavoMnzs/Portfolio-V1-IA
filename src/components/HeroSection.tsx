@@ -5,10 +5,10 @@ const HeroSection = () => {
   return (
     <section id="hero" className="container py-20 md:py-32 text-center">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary-foreground">
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-primary">
           Desenvolvimento Web Moderno e Eficaz
         </h1>
-        <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+        <p className="text-xl text-foreground mb-10 max-w-2xl mx-auto">
           Transformo ideias complexas em soluções digitais elegantes e de alto desempenho, focadas na experiência do usuário.
         </p>
         <div className="flex justify-center space-x-4">

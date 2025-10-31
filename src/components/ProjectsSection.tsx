@@ -31,7 +31,7 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <section id="projects" className="container py-16 md:py-24 bg-muted/30 rounded-xl">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Meus Projetos</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Meus Projetos</h2>
       <div className="grid gap-8 md:grid-cols-3">
         {projects.map((project, index) => (
           <Card key={index} className="flex flex-col justify-between">

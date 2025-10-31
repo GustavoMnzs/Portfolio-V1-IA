@@ -39,7 +39,7 @@ const socialLinks = [
 const ContactInfoSection = () => {
   return (
     <section id="contact" className="container py-16 md:py-24">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Informações de Contato</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Informações de Contato</h2>
       
       <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-3">
         {contactItems.map((item, index) => (

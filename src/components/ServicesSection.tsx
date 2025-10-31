@@ -23,7 +23,7 @@ const services = [
 const ServicesSection = () => {
   return (
     <section id="services" className="container py-16 md:py-24">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Meus Serviços</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Meus Serviços</h2>
       <div className="grid gap-8 md:grid-cols-3">
         {services.map((service, index) => (
           <Card 
