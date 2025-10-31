@@ -14,9 +14,12 @@ const buttonVariants = cva(
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        // Nova variante para Outline de alto contraste
+        // Variante para Outline de alto contraste (Ciano)
         "primary-outline":
           "border border-primary text-primary bg-background hover:bg-primary hover:text-primary-foreground",
+        // Nova variante para Outline Branco com Hover Ciano
+        "light-outline":
+          "border border-foreground text-foreground bg-background hover:bg-primary hover:text-primary-foreground",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",

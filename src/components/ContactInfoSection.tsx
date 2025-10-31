@@ -48,8 +48,8 @@ const ContactInfoSection = () => {
             ))}
           </div>
 
-          {/* Botão de Ação - Usando primary-outline para o visual de contorno */}
-          <CustomButton variant="primary-outline" size="lg" asChild className="mt-8">
+          {/* Botão de Ação - Usando light-outline para branco com hover ciano */}
+          <CustomButton variant="light-outline" size="lg" asChild className="mt-8">
             <a href={`mailto:${contactItems[0].value}`}>
               Falar com Gustavo
             </a>
