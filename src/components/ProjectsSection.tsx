@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { Github, Link } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { CustomButton } from "@/components/CustomButton";
 
 const projects = [
   {
@@ -49,16 +50,18 @@ const ProjectsSection = () => {
               </div>
             </CardContent>
             <CardFooter className="flex justify-end space-x-2">
+              {/* Botão Outline (GitHub) */}
               <Button variant="outline" size="icon" asChild>
                 <a href={project.github} target="_blank" rel="noopener noreferrer">
                   <Github className="h-4 w-4" />
                 </a>
               </Button>
-              <Button size="icon" asChild>
+              {/* Botão Primário (Link) - Usando CustomButton para o estilo de contraste */}
+              <CustomButton size="icon" asChild>
                 <a href={project.link} target="_blank" rel="noopener noreferrer">
                   <Link className="h-4 w-4" />
                 </a>
-              </Button>
+              </CustomButton>
             </CardFooter>
           </Card>
         ))}

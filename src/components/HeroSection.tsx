@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { CustomButton } from "@/components/CustomButton";
 import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
@@ -12,9 +13,9 @@ const HeroSection = () => {
           Transformo ideias complexas em soluções digitais elegantes e de alto desempenho, focadas na experiência do usuário.
         </p>
         <div className="flex justify-center space-x-4">
-          <Button size="lg" className="shadow-lg">
+          <CustomButton size="lg" className="shadow-lg">
             Ver Projetos
-          </Button>
+          </CustomButton>
           <Button variant="outline" size="lg">
             Entrar em Contato <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
