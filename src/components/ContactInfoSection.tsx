@@ -38,7 +38,7 @@ const ContactInfoSection = () => {
                 <p className="text-sm text-muted-foreground mb-1">{item.title}</p>
                 <a 
                   href={item.href} 
-                  className="text-xl font-medium hover:text-primary transition-colors"
+                  className="text-xl font-medium text-foreground hover:text-primary transition-colors"
                   target={item.href.startsWith('http') || item.href.startsWith('mailto') || item.href.startsWith('tel') ? "_blank" : "_self"}
                   rel="noopener noreferrer"
                 >
