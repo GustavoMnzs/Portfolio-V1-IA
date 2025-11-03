@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 import { CustomButton } from "@/components/CustomButton";
+import AnimatedMailIcon from "./AnimatedMailIcon";
 
 const contactItems = [
   {
@@ -56,10 +57,9 @@ const ContactInfoSection = () => {
           </CustomButton>
         </div>
 
-        {/* Coluna de Ilustração (Placeholder) */}
+        {/* Coluna de Ilustração (Animação) */}
         <div className="hidden md:flex justify-center items-center h-full min-h-[400px] bg-muted/50 rounded-xl p-8">
-          <Mail className="h-24 w-24 text-primary/50" />
-          <p className="absolute text-muted-foreground/50 mt-40">Ilustração de Contato</p>
+          <AnimatedMailIcon />
         </div>
       </div>
     </section>
