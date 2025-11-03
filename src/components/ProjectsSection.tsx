@@ -57,13 +57,7 @@ const ProjectsSection = () => {
               </div>
             </CardContent>
             <CardFooter className="flex justify-end space-x-2">
-              {/* Botão Outline (GitHub) - Mantido para consistência, mas usando CustomButton para contraste */}
-              <CustomButton variant="primary-outline" size="icon" asChild>
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                  <Github className="h-4 w-4" />
-                </a>
-              </CustomButton>
-              {/* Botão Primário (Link) */}
+              {/* Botão Primário (Link) - Mantido como único botão */}
               <CustomButton size="icon" asChild>
                 <a href={project.link} target="_blank" rel="noopener noreferrer">
                   <Link className="h-4 w-4" />
